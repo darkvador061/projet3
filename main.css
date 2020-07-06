@@ -12,22 +12,27 @@ header{
     background-color: #579c87;
 }
 
-.panel{
+.carte{
     
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
    justify-content: space-evenly;
 } 
-.item{
-     width: 800px;
-     height: 920px;
-     background-color: #579c87;
-     border: 1px solid black;
-     margin-top: 40px;
+
+section li{
+    list-style-type: none;
+    width: 850px;
+    height: 950px;
+    margin-top: 40px;
+    border: 1px solid black;
+}
+button{
+    width: 850px;
+    height: 950px;
 }
 
-button{
+.bou{
     
     width: 600px;
     height: 100px;
@@ -60,3 +65,4 @@ footer{
     text-align: right;
     margin-left: 1640px;
     margin-top: -40px;
+}
