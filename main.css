@@ -1,68 +1,211 @@
 .container{
     width: 1880px;
     height: 1080px;
+    position: relative
 }
 header{
     margin: 0%;
     padding: 0%;
     height: 150px;
+    width: 100%;
     font-size: 4em;
     color: #fdcb46;
-    text-align: center;
     background-color: #579c87;
+    position: absolute;
 }
 
+h1{
+    text-align: center;
+    margin-top: -10px;
+}
+h2:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+p{
+    margin-top: 280px;
+    text-decoration: none;    
+ }
+a{
+     text-decoration: none;
+ }
+
 .carte{
-    
-   display: flex;
    flex-wrap: wrap;
    flex-direction: row;
    justify-content: space-evenly;
+   display: flex;  
 } 
 
-section li{
-    list-style-type: none;
+.Menu1{
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 950px;
+    margin-top: 180px;
+    align-items: justify;
+    text-align: center;
+    color: #58272e;
+    font-size: 3em;
+    background-color: #fbdcdb;
+    box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
+}
+    
+}
+.fas{
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, #f15861, #f78f6a);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.Menu1 p{
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    margin-top: 220px;
+}
+
+
+.Menu2{
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 950px;
+    margin-top: 180px;
+    font-size: 3em;
+    text-align: center;
+    box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
+}
+.Menu2 p{
+    margin-top: 320px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, white, red);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+}
+
+
+.Menu3{
+    display: flex;
+    flex-direction: column;
     width: 850px;
     height: 950px;
     margin-top: 40px;
-    border: 1px solid black;
+    font-size: 3em;
+    text-align: center;
+    box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
 }
-button{
+.Menu3 p{
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, #0453ea , #0665f0 35%, #0887fb);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.Menu4{
+    display: flex;
+    flex-direction: column;
     width: 850px;
     height: 950px;
+    margin-top: 40px;
+    font-size: 3em;
+    text-align: center;
+    box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
 }
 
-.bou{
-    
+.Menu4 p{
+    font-size: 1.5em;
+    background-image: linear-gradient( #38b634, #b1d8b0 );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.Menu4 h2{
+    color: #38b634;
+}
+.pro{
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
     width: 600px;
     height: 100px;
     margin-top: 40px;
-    margin-left: 650px;
-    font-size: 3em;
+    margin-left: 640px;
+    font-size: 4.4em;
     color: #fdcb46;
     background-color: #579c87;
-    border-radius: 40px 40px;
-    border: #579c87;
+    border-radius: 30px 30px;     
 }
+.pro:hover::after {
+    display: inline-block;
+    animation: dotty steps(1,end) 1s infinite;
+    content: '';
+  }
+  
+  @keyframes dotty {
+    0%   { content: ''; }
+    25%  { content: '.'; }
+    50%  { content: '..'; }
+    75%  { content: '...'; }
+    100% { content: ''; }
+  }
+
 footer{
     flex-direction: row;
-    display: flex;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 180px;
     height: 120px;
     background-color: #579c87;
+    position: absolute;
+    flex-direction: row;
+}
+
+button{
+    width: 280px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    background-color: #579c87;
+    color: #fdcb46;
+    border: none;
+}
+button:hover{
+    animation: wiggle 0.5s infinite;
+}
+
+
+@keyframes wiggle{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
 }
 .mention{
-    margin-left: 20px;
-    font-size: 2.2em;
-    color: #fdcb46;
-    text-align: left;
-    padding-top: 40px;
-}
+    font-size: 2.1em;
+    margin-top: 40px;
+    margin-left: 40px;
+}  
 .contact{
-    
-    font-size: 2.2em;
-    color: #fdcb46;
-    text-align: right;
-    margin-left: 1640px;
-    margin-top: -40px;
+    margin-left: 1560px;
+    margin-right: 40px;
+    font-size: 2.1em;
+    margin-top: 40px;
 }
+
+
