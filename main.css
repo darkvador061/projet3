@@ -48,10 +48,9 @@ a{
     color: #58272e;
     font-size: 3em;
     background-color: #fbdcdb;
-    box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
+    box-shadow: 2px 2px 2px 2px  rgb(179, 176, 176);
 }
     
-}
 .fas{
     margin-bottom: 20px;
     background-image: linear-gradient(to right, #f15861, #f78f6a);
@@ -63,7 +62,9 @@ a{
     font-size: 1.6em;
     margin-bottom: 20px;
     margin-top: 220px;
+    font-family: 'Devonshire', cursive;
 }
+
 
 
 .Menu2{
@@ -74,19 +75,22 @@ a{
     margin-top: 180px;
     font-size: 3em;
     text-align: center;
-    box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
+    box-shadow: 2px 2px 2px 2px  rgb(179, 176, 176);
+    background: linear-gradient(to left, rgb(244, 220, 248), rgb(239, 238, 240)); 
+    font-family: 'Croissant One', cursive;
 }
 .Menu2 p{
     margin-top: 320px;
     margin-bottom: 20px;
-    font-size: 1.5em;
-    background-image: linear-gradient(to right, white, red);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, #e0881d, #a07e81, #a264cc);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    
+}  
+.Menu2 h2{
+    color: #c77412;
 }
-
 
 .Menu3{
     display: flex;
@@ -97,13 +101,17 @@ a{
     font-size: 3em;
     text-align: center;
     box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
+    font-family: 'Galada', cursive;
 }
 .Menu3 p{
     font-size: 1.5em;
-    background-image: linear-gradient(to right, #0453ea , #0665f0 35%, #0887fb);
+    background-image: linear-gradient(to right, #0230df , #1162ed , #0889fb);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+}
+.Menu3 h2{
+    color: #0887fb;
 }
 .Menu4{
     display: flex;
@@ -114,6 +122,7 @@ a{
     font-size: 3em;
     text-align: center;
     box-shadow: 2px 2px 2px 4px  rgb(179, 176, 176);
+    font-family: 'Kaushan Script', cursive;
 }
 
 .Menu4 p{
@@ -162,6 +171,7 @@ footer{
     background-color: #579c87;
     position: absolute;
     flex-direction: row;
+    
 }
 
 button{
