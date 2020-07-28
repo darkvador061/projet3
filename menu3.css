@@ -1,0 +1,207 @@
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} 
+header{
+    margin: 0%;
+    padding: 0%;
+    height: 150px;
+    width: 100%;
+    font-size: 4em;
+    color: #fdcb46;
+    background-color: #579c87;
+   
+}
+h2, h3, p{
+    font-family: 'Galada', cursive;
+}
+h1{
+   
+    text-align: center;
+    margin-top: -10px;
+}
+h2{
+    text-align: center;
+    font-family: 'Croissant One', cursive;
+    font-size: 2.8em; 
+    background-image: linear-gradient(to right, #0230df , #0889fb);
+    color: transparent; 
+    -webkit-background-clip: text;   
+}  
+section{
+    margin-top: 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 1.3em;
+    background: linear-gradient(to bottom, #E8E7E6 , #F3F2F1  );
+}
+
+.hr {
+    
+    /* centre verticalement les enfants entre eux */
+    align-items: center;
+ 
+    /* active flexbox */
+    display: flex;
+
+    /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
+    text-align: center;
+    height: 50px;
+    
+}
+
+.hr::before,
+.hr::after {
+    /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
+    border-top: solid;
+    color:#a264cc;
+    
+   
+    /* nécessaire pour afficher les pseudo-éléments */
+    content: "";
+
+    /* partage le reste de la largeur disponible */
+    flex: 1;
+
+    /* espace les traits du texte */
+    margin: 0 .5em;
+}
+.hr:hover::before{
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: gauche 4s infinite ;
+}
+@keyframes gauche{
+     0%{ transform: translateX(0) scaleX(0);}
+    25%{ transform: translateX(0) scaleX(1);}
+    50%{ transform: translateX(0) scaleX(0);}
+    75%{ transform: translateX(0) scaleX(1);}
+   100%{ transform: translateX(0) scaleX(0);}
+}
+.hr:hover::after{
+    transform-origin: right;
+    transform: scaleX(0);
+    animation: droite 4s infinite ;
+}
+@keyframes droite{
+    0%{ transform: translateX(0) scaleX(0);}
+    25%{ transform: translateX(0) scaleX(1);}
+    50%{ transform: translateX(0) scaleX(0);}
+    75%{ transform: translateX(0) scaleX(1);}
+    100%{ transform: translateX(0) scaleX(0);}
+}
+
+
+ /* entrée*/
+.entree{
+    padding: 0%;
+    width: 780px;
+    color: black;
+}
+section .entreeP{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}  
+section .prixE{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+}
+/*plat*/
+.plat{
+    width: 780px;
+    color: black;
+}
+section .platP{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+}  
+section .prixP{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+}
+/*dessert*/
+section .dessertP{
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    margin-left: 10px;
+} 
+section .prixD{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+} 
+.dessert{
+    width: 780px;
+    color: black;
+}
+footer{
+    flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
+    height: 120px;
+    background-color: #579c87;
+    
+}
+.foot{
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+}
+.foot a{
+    width: 230px;
+    margin-top: 40px;
+    flex-direction: row;
+    font-size: 1.8em;
+    background-color: #579c87;
+    color: #fdcb46;
+    border: none;
+    display: flex;
+    margin-left: 50px;
+    text-decoration: none;
+}
+.foot a:hover{
+    animation: wiggle 0.5s infinite;
+}
+
+
+
+@keyframes wiggle{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
