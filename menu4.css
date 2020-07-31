@@ -41,28 +41,24 @@ section{
     font-size: 1.3em;
     
 }
-
-.hr {
+h3 {
     
     /* centre verticalement les enfants entre eux */
     align-items: center;
- 
+
     /* active flexbox */
     display: flex;
 
     /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
     text-align: center;
     height: 50px;
-    
+       
 }
-
-.hr::before,
-.hr::after {
+h3::before,
+h3::after {
     /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
-    border-top: solid;
+    border-top:  solid;
     color: #38b634;
-    
-   
     /* nécessaire pour afficher les pseudo-éléments */
     content: "";
 
@@ -72,29 +68,18 @@ section{
     /* espace les traits du texte */
     margin: 0 .5em;
 }
-.hr:hover::before{
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: gauche 4s infinite ;
+
+section a{
+    color: black;
+    display: inline;
+    text-decoration: none;
+    background: linear-gradient(to top, #38b634 0%, #38b634 4px, transparent 5px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s;
 }
-@keyframes gauche{
-     0%{ transform: translateX(0) scaleX(0);}
-    25%{ transform: translateX(0) scaleX(1);}
-    50%{ transform: translateX(0) scaleX(0);}
-    75%{ transform: translateX(0) scaleX(1);}
-   100%{ transform: translateX(0) scaleX(0);}
-}
-.hr:hover::after{
-    transform-origin: right;
-    transform: scaleX(0);
-    animation: droite 4s infinite ;
-}
-@keyframes droite{
-    0%{ transform: translateX(0) scaleX(0);}
-    25%{ transform: translateX(0) scaleX(1);}
-    50%{ transform: translateX(0) scaleX(0);}
-    75%{ transform: translateX(0) scaleX(1);}
-    100%{ transform: translateX(0) scaleX(0);}
+
+section a:hover{
+    background-size: 100% 100%;
 }
 
 

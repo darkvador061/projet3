@@ -53,7 +53,7 @@ section{
     font-size: 1.3em;
 }
 
-.hr {
+h3 {
     
     /* centre verticalement les enfants entre eux */
     align-items: center;
@@ -68,8 +68,8 @@ section{
     
 }
 
-.hr::before,
-.hr::after {
+h3::before,
+h3::after {
     /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
     border-top:  solid;
 
@@ -82,32 +82,19 @@ section{
     /* espace les traits du texte */
     margin: 0 .5em;
 }
-.hr:hover::before{
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: gauche 4s infinite ;
-}
-@keyframes gauche{
-    0%{ transform: translateX(0) scaleX(0);}
-    25%{ transform: translateX(0) scaleX(1);}
-    50%{ transform: translateX(0) scaleX(0);}
-    75%{ transform: translateX(0) scaleX(1);}
-    100%{ transform: translateX(0) scaleX(0);}
-}
-.hr:hover::after{
-    transform-origin: right;
-    transform: scaleX(0);
-    animation: droite 4s infinite ;
-}
-@keyframes droite{
-    0%{ transform: translateX(0) scaleX(0);}
-    25%{ transform: translateX(0) scaleX(1);}
-    50%{ transform: translateX(0) scaleX(0);}
-    75%{ transform: translateX(0) scaleX(1);}
-    100%{ transform: translateX(0) scaleX(0);}
-}
 
-
+section a{
+    color: #58272e;
+    display: inline;
+    justify-content: space-around;
+    text-decoration: none;
+    background: linear-gradient(to top, #58272e 0%, #58272e 4px, transparent 5px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s;
+}
+section a:hover{
+    background-size: 100% 100%;
+}
  /* entrée*/
 .entree{
     padding: 0%;
@@ -198,6 +185,7 @@ footer{
 }
 .foot a:hover{
     animation: wiggle 0.5s infinite;
+    text-decoration: none;
 }
 
 
