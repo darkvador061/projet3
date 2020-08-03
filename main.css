@@ -23,7 +23,7 @@ h1{
 }
 h2:hover{
     opacity: 0.8;
-    transform: scale(1);
+    transform: scale(1.2);
 }
 p{
     margin-top: 280px;
