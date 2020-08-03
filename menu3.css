@@ -44,7 +44,8 @@ section{
     justify-content: space-evenly;
     display: flex;
     font-size: 1.3em;
-    background: linear-gradient(to bottom, #E8E7E6 , #F3F2F1  );
+    background: linear-gradient(to bottom, #E8E7E6 , #F3F2F1);
+    margin-bottom: 160px;
 }
 
 h3 {
@@ -177,7 +178,9 @@ footer{
     margin-top: 40px;
     height: 120px;
     background-color: #579c87;
-    
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    position: fixed;
 }
 .foot{
       text-align: center;
