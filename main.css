@@ -210,6 +210,18 @@ footer{
     }
     
 }
-
+@media screen and (max-width: 1023px){
+    .Menu1, .Menu2, .Menu3, .Menu4{
+        width: 450px;
+        height: 550px; 
+        font-size: 1.6em;   
+    }
+    .Menu1 p, .Menu3 p, .Menu4 p{
+        margin-top: 150px;
+    }
+    .Menu2 p{
+        margin-top: 210px;
+    }
+}    
 
 
