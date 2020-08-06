@@ -36,10 +36,12 @@ section{
     margin-top: 40px;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+   
     display: flex;
     font-size: 1.3em;
     margin-bottom: 160px;
+    margin-right: 0%;
+    margin-left: 0%;
 }
 h3 {
     
@@ -93,7 +95,7 @@ section .entreeP{
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 0px;
 }  
 section .prixE{
     
@@ -101,7 +103,7 @@ section .prixE{
     flex-direction: column;
     text-align: right;
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 /*plat*/
 .plat{
@@ -113,14 +115,14 @@ section .platP{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 10px;
+    
 }  
 section .prixP{
     display: flex;
     flex-direction: column;
     text-align: right;
     font-weight: bold;
-    margin-right: 10px;
+   
 }
 /*dessert*/
 section .dessertP{
@@ -198,8 +200,14 @@ footer{
         flex-direction: initial;
         margin-bottom: 0%;
         font-size: 1.6em;
+        justify-content: center;
     }
     footer{
         position: initial;
+    }
+    section .prixP p {
+        
+        margin-top: 25px;
+        margin-bottom: 30px;
     }
 }    

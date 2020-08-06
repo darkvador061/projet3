@@ -126,6 +126,7 @@ section .platP{
     flex-direction: column;
     justify-content: space-between;
     margin-left: 10px;
+    width: 60%;
 }  
 section .prixP{
     display: flex;
@@ -133,7 +134,7 @@ section .prixP{
     text-align: right;
     font-weight: bold;
     margin-right: 10px;
-    margin-top: 50px;
+    
 }
 /*dessert*/
 .dessert a{
