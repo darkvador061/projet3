@@ -211,8 +211,8 @@ footer{
         margin-bottom: 0%;
         font-size: 1.6em;
     }
-    section .prixP{
-        margin-top: 60px;
+    section .prixP p {    
+        margin-bottom: 57px;
     }
     footer{
         position: initial;
