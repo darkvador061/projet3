@@ -1,94 +1,114 @@
 .container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: block;
+}
 
-} 
 header{
-    margin: 0%;
-    padding: 0%;
-    height: 150px;
-    width: 100%;
-    font-size: 4em;
-    color: #fdcb46;
-    background-color: #579c87;
-   
+  display: flex;
+  justify-content: center;
+  background-color: #579c87;
+  text-align: center;
+  font-size: 3em;
+  
+}
+h1{
+  color: #fdcb46;
+  text-align: center;
+  letter-spacing: -0.2rem;
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  width: 100%;
+  margin: 2rem 0 2rem;
 }
 
-h1{
-   
-    text-align: center;
-    margin-top: -10px;
-}
-h3, p{
-    font-family: 'Dancing Script', cursive;
-}
-p{
-    font-weight: 800;
+/*mise en page*/
+section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: auto;
+  margin-top: 40px;
+  align-content: center;
+  padding: 5rem 2rem 8rem 2rem;
+  color: #3c1218;
+  box-shadow: 0px 0px 6px 6px #e7e2e2;
+  -webkit-box-shadow: 0px 0px 6px 6px #e7e2e2;
+  -moz-box-shadow: 0px 0px 6px 6px #e7e2e2;
+  background-color: #edefef;
+  max-width: 50%;
+  font-family: "Kalam", cursive;
 }
 h2{
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.8em; 
-    background-image: linear-gradient(to right, #0230df , #0889fb);
-    color: transparent; 
-    -webkit-background-clip: text;   
-}  
-section{
-    margin-top: 40px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
+  grid-column: 1 / span3;
+  grid-row: 1;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: lighter;
+  background: -webkit-linear-gradient(360deg, #112edb, #0889fb);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.entree{
+  grid-column: 1 / span 3;
+  grid-row: 2; 
+}
+.plat{
+  grid-column: 1 / span 3;
+  grid-row: 3; 
+}
+.dessert{
+  grid-column: 1 /span 3;
+  grid-row: 4;
+}
+li{
+    list-style-type: none;
     display: flex;
-    font-size: 1.3em;
-    background: linear-gradient(to bottom, #E8E7E6 , #F3F2F1);
-    margin-bottom: 160px;
+    justify-content: space-between;    
 }
 
+/*mise en place des differents traits à coté des h3*/
 h3 {
-    
-    /* centre verticalement les enfants entre eux */
-    align-items: center;
+  
+  /* centre verticalement les enfants entre eux */
+  align-items: center;
 
-    /* active flexbox */
-    display: flex;
+  /* active flexbox */
+  display: flex;
 
-    /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
-    text-align: center;
-    height: 50px;
-    
-    
+  /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
+  text-align: center;
+  height: 50px; 
 }
 
 h3::before,
 h3::after {
-    /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
-    border-top:  solid;
+  /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
+  border-top:  solid;
 
-    /* nécessaire pour afficher les pseudo-éléments */
-    content: "";
+  /* nécessaire pour afficher les pseudo-éléments */
+  content: "";
 
-    /* partage le reste de la largeur disponible */
-    flex: 1;
+  /* partage le reste de la largeur disponible */
+  flex: 1;
 
-    /* espace les traits du texte */
-    margin: 0 .5em;
+  /* espace les traits du texte */
+  margin: 0 .5em;
 }
 
+/* mise en place des soulignements*/
 section a{
-    color: black;
-    display: inline;
-    text-decoration: none;
+  color: black;
+  display: inline;
+  text-decoration: none;
 }
 section a:hover{
-    background-size: 100% 100%;
+  background-size: 100% 100%;
 }
-
-
- /* entrée*/
 .entree h3::before,
 .entree h3::after{
     color: #0230df;
@@ -97,27 +117,7 @@ section a:hover{
     background: linear-gradient(to top, #0230df 0%, #0230df 4px, transparent 5px) no-repeat;
     background-size: 0 100%;
     transition: background-size .3s;
- }
-.entree{
-    padding: 0%;
-    width: 780px;
-    color: black;
 }
-section .entreeP{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}  
-section .prixE{
-    
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 10px;
-}
-/*plat*/
 .plat h3::before,
 .plat h3::after{
     color: #0670f3;
@@ -126,26 +126,7 @@ section .prixE{
     background: linear-gradient(to top, #0670f3 0%, #0670f3 4px, transparent 5px) no-repeat;
     background-size: 0 100%;
     transition: background-size .3s;
- }
-.plat{
-    width: 780px;
-    color: black;
 }
-section .platP{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 10px;
-}  
-section .prixP{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 10px;
-}
-/*dessert*/
 .dessert h3::before,
 .dessert h3::after{
     color: #229df9;
@@ -154,83 +135,174 @@ section .prixP{
     background: linear-gradient(to top, #229df9 0%, #229df9 4px, transparent 5px) no-repeat;
     background-size: 0 100%;
     transition: background-size .3s;
- }
-section .dessertP{
-    position: absolute;
-    display: flex;
-    flex-direction: column; 
-    margin-left: 10px;
-} 
-section .prixD{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 10px;
-} 
-.dessert{
-    width: 780px;
-    color: black;
 }
+
+/* pied de page*/
+
 footer{
-    flex-direction: row;
-    width: 100%;
-    margin-top: 40px;
-    height: 120px;
-    background-color: #579c87;
-    padding: 10px 10px 0px 10px;
-    bottom: 0;
-    position: fixed;
+  background-color: #579c87;
+  line-height: 3rem;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  justify-content: space-between;
 }
 .foot{
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
+  display: contents;
+}
+.gauche {
+  padding-left: 1rem;
+  text-decoration: none;
+  color: #fdcb46;
+}
+
+.droite{
+  padding-right: 1rem;
+  text-decoration: none;
+  color: #fdcb46;
 }
 .foot a{
-    width: 230px;
-    margin-top: 40px;
-    flex-direction: row;
-    font-size: 1.8em;
-    background-color: #579c87;
-    color: #fdcb46;
-    border: none;
-    display: flex;
-    margin-left: 50px;
-    text-decoration: none;
+  width: 230px;
+  margin-top: 10px;
+  flex-direction: row;
+  font-size: 1.8em;
+  background-color: #579c87;
+  color: #fdcb46;
+  border: none;
+  display: flex;
+  margin-left: 50px;
+  text-decoration: none;
 }
 .foot a:hover{
-    animation: wiggle 0.5s infinite;
+  -webkit-animation: wiggle 0.5s infinite;
+          animation: wiggle 0.5s infinite;
 }
 
-
+@-webkit-keyframes wiggle{
+  0%{
+      transform: rotate(0deg);
+  }
+  25%{
+      transform: rotate(5deg);
+  }
+  50%{
+      transform: rotate(-5deg);
+  }
+  75%{
+      transform: rotate(5deg);
+  }
+  100%{
+      transform: rotate(0deg);
+  }
+  
+}
 
 @keyframes wiggle{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(5deg);
-    }
-    50%{
-        transform: rotate(-5deg);
-    }
-    75%{
-        transform: rotate(5deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-    
+  0%{
+      transform: rotate(0deg);
+  }
+  25%{
+      transform: rotate(5deg);
+  }
+  50%{
+      transform: rotate(-5deg);
+  }
+  75%{
+      transform: rotate(5deg);
+  }
+  100%{
+      transform: rotate(0deg);
+  }
+  
 }
-@media screen and (max-width: 1023px){
-    section{
-        width: 100%;
-        flex-direction: initial;
-        margin-bottom: 0%;
-        font-size: 1.6em;
-    }
-    footer{
-        position: initial;
-    }
-}    
+
+/*media querries*/
+
+@media screen and (max-width: 1272px){
+  .section{
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 1180px){
+  .section{
+    max-width: 100%; 
+  }
+    li {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     grid-column: 1 / span 3;
+     font-size: larger;
+   }
+   .prix{
+     font-weight: bold;
+     grid-column: 2;
+   }
+   h3{
+     font-size: 1.6rem;
+   }
+}
+/*tablette*/
+@media screen and (max-width: 769px){
+  h2{
+    font-size: 3em;
+  }
+  ul{
+    padding: inherit;
+  }
+  h2{
+    padding-bottom: 40px;
+  }
+  .foot a{
+    margin: 0;
+    justify-content: center;
+  }
+}
+/*telephone*/
+@media screen and (max-width: 426px){
+  section{
+    max-width: initial;
+  }
+  header {  
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  .entrée,
+  .plat,
+  .dessert {
+    
+    text-align: center;
+  }
+
+  .entréeP,
+  .platsP,
+  .dessertP {
+    text-align: center;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+  ul {
+    font-size: 1.3rem;
+  }
+  .foot a{
+    justify-content: center;
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+
+
+ 

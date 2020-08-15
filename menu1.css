@@ -1,182 +1,170 @@
 .container{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-   
-} 
-header{
-    margin:0%;
-    padding: 0%;
-    height: 150px;
-    width: 100%;
-    font-size: 4em;
-    color: #fdcb46;
+    display: block;
+  }
+  
+  header{
+    display: flex;
+    justify-content: center;
     background-color: #579c87;
-    
-}
-h1{
-    
     text-align: center;
-    margin-top: -10px;
-}
-
-.fas{
+    font-size: 3em;  
+  }
+  h1{
+    color: #fdcb46;
+    text-align: center;
+    letter-spacing: -0.2rem;
+    line-height: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    width: 100%;
+    margin: 2rem 0 2rem;
+  }
+  
+  /*mise en page*/
+  section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: auto;
     margin-top: 40px;
+    align-content: center;
+    padding: 5rem 2rem 8rem 2rem;
+    color: #3c1218;
+    box-shadow: 0px 0px 6px 6px #e7e2e2;
+    -webkit-box-shadow: 0px 0px 6px 6px #e7e2e2;
+    -moz-box-shadow: 0px 0px 6px 6px #e7e2e2;
+    background-color: #fbdcdb;
+    max-width: 50%;
+    
+  }
+  p{
+    font-family: 'Mirza', cursive;
+  }
+  .fas{
     background-image: linear-gradient(to right, #f15861, #f78f6a);
     color: transparent;
     -webkit-background-clip: text;
 }
-h2{
-    font-family: 'Devonshire', cursive; 
-    font-size: 2.8em;
+  .h2{
     color: #58272e;
     
-}  
-.entete{
-    
+}
+  .entete{
+    grid-column: 1 / span3;
+    grid-row: 1;
     text-align: center;
-}
-
-section{
-   
-    margin-top: 40px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: lighter;
+    font-family: 'Devonshire', cursive; 
+  }
+  .entree{
+    grid-column: 1 / span 3;
+    grid-row: 2; 
+  }
+  .plat1{
+    grid-column: 1 / span 3;
+    grid-row: 3; 
+  }
+  .dessert{
+    grid-column: 1 /span 3;
+    grid-row: 4;
+  }
+  .fin{
     display: flex;
-    background-color: #fbdcdb;
-    color:#58272e;
-    font-family: 'Mirza', cursive;
-    font-size: 1.3em;
-    margin-bottom: 160px;
-}
-
-h3 {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+    font-size: 1.2em;
+    margin-top: 40px; 
+    justify-content: center; 
+  }
+  
+  li{
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;    
+  }
+  
+  /*mise en place des differents traits à coté des h3*/
+  h3 {
     
     /* centre verticalement les enfants entre eux */
     align-items: center;
-
+  
     /* active flexbox */
     display: flex;
-
+  
     /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
     text-align: center;
-    height: 50px;
-    
-    
-}
-
-h3::before,
-h3::after {
+    height: 50px; 
+  }
+  
+  h3::before,
+  h3::after {
     /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
     border-top:  solid;
-
+  
     /* nécessaire pour afficher les pseudo-éléments */
     content: "";
-
+  
     /* partage le reste de la largeur disponible */
     flex: 1;
-
+  
     /* espace les traits du texte */
     margin: 0 .5em;
-}
-
-section a{
+  }
+  
+  /* mise en place des soulignements*/
+  section a{
     color: #58272e;
     display: inline;
-    justify-content: space-around;
     text-decoration: none;
     background: linear-gradient(to top, #58272e 0%, #58272e 4px, transparent 5px) no-repeat;
     background-size: 0 100%;
     transition: background-size .3s;
-}
-section a:hover{
+  }
+  section a:hover{
     background-size: 100% 100%;
-}
- /* entrée*/
-.entree{
-    padding: 0%;
-    width: 780px;
-}
-section .entreeP{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}  
-section .prixE{
-    
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 10px;
-}
-/*plat*/
-.plat{
-     width: 780px;
-}
-section .platP{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 10px;
-}  
-section .prixP{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 10px;
-}
-/*dessert*/
-section .dessertP{
-    position: absolute;
-    display: flex;
-    flex-direction: column; 
-    margin-left: 10px;
-}  
-.dessert{
-     width: 780px;
-}
-
-.fin{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin-top: 180px;
-    padding-bottom: 20px;    
-} 
-.fin p{
-    font-weight: bold;
-    font-size: 1.5em;
-    font-family: 'Devonshire', cursive; 
-    margin-top: 50px;
-    padding-left: 15px;
-}
-footer{
-    flex-direction: row;
-    width: 100%;
-    margin-top: 40px;
-    height: 120px;
+  }
+  .entree h3::before,
+  .entree h3::after{
+    color: #58272e;
+  }
+  
+  .plat h3::before,
+  .plat h3::after{
+    color: #58272e;
+  }
+ 
+  .dessert h3::before,
+  .dessert h3::after{
+   color: #58272e;
+  }
+ 
+ 
+  /* pied de page*/
+  
+  footer{
     background-color: #579c87;
-    padding: 10px 10px 0px 10px;
-    bottom: 0;
+    line-height: 3rem;
+    display: flex;
     position: fixed;
-}
-.foot{
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-}
-.foot a{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .foot{
+    display: contents;
+  }
+  
+  .foot a{
     width: 230px;
-    margin-top: 40px;
+    margin-top: 10px;
     flex-direction: row;
     font-size: 1.8em;
     background-color: #579c87;
@@ -185,14 +173,13 @@ footer{
     display: flex;
     margin-left: 50px;
     text-decoration: none;
-}
-.foot a:hover{
-    animation: wiggle 0.5s infinite;
-    text-decoration: none;
-}
-
-
-@keyframes wiggle{
+  }
+  .foot a:hover{
+    -webkit-animation: wiggle 0.5s infinite;
+            animation: wiggle 0.5s infinite;
+  }
+  
+  @-webkit-keyframes wiggle{
     0%{
         transform: rotate(0deg);
     }
@@ -209,19 +196,110 @@ footer{
         transform: rotate(0deg);
     }
     
+  }
+  
+  @keyframes wiggle{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+  }
+  
+  /*media querries*/
+  
+@media screen and (max-width: 1272px){
+   section{
+      max-width: 80%;
+  }
 }
-
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1180px){
+   section{
+    max-width: 100%; 
+  }
+      li {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       grid-column: 1 / span 3;
+       font-size: larger;
+     }
+     .prix{
+       font-weight: bold;
+       grid-column: 2;
+     }
+    h3{
+   font-size: 1.6rem;
+  }
+}
+  /*tablette*/
+  @media screen and (max-width: 769px){
+    h2{
+      font-size: 2em;
+    }
+    ul{
+      padding: inherit;
+    }
+    h2{
+      padding-bottom: 40px;
+    }
+    .foot a{
+      margin: 0;
+      justify-content: center;
+    }
+  }
+  /*telephone*/
+  @media screen and (max-width: 426px){
     section{
-        width: 100%;
-        flex-direction: initial;
-        margin-bottom: 0%;
-        font-size: 1.6em;
+      max-width: initial;
     }
-    footer{
-        position: initial;
+    header {  
+      font-size: 2em;
     }
-    .fin{
-        margin-top: 220px;
+    h1 {
+      font-size: 2rem;
     }
-}
+    .entete .fas{
+    font-size: 2em;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .entrée,
+    .plat,
+    .dessert {
+      
+      text-align: center;
+    }
+  
+    .entréeP,
+    .platsP,
+    .dessertP {
+      text-align: center;
+    }
+  
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+    ul {
+      font-size: 1.3rem;
+    }
+    .foot a{
+      justify-content: center;
+      margin: 0;
+      font-size: 1em;
+    }
+  }
+  
