@@ -222,12 +222,12 @@ footer{
 /*media querries*/
 
 @media screen and (max-width: 1272px){
-  .section{
+  section{
     max-width: 80%;
   }
 }
 @media screen and (max-width: 1180px){
-  .section{
+  section{
     max-width: 100%; 
   }
     li {
