@@ -181,17 +181,13 @@ a{
   footer{
     background-color: #579c87;
     line-height: 3rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     
   }
 .foot{
@@ -200,16 +196,11 @@ a{
 .foot a{
     width: 230px;
     margin-top: 10px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     font-size: 1.8em;
     background-color: #579c87;
     color: #fdcb46;
     border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-left: 50px;
     text-decoration: none;
